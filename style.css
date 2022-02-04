@@ -76,6 +76,11 @@ button{
   cursor: pointer;
 }
 
+.btns:hover{
+  color: #556262;
+  transition: color 0.3s ease; 
+}
+
 .btn-reset{
   visibility: hidden;
 }

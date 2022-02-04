@@ -45,7 +45,6 @@ btnModalYes.addEventListener('click', () => {
 
 // EVENT LISTENER CLICK NO MODAL WINDOW
 btnModalNo.addEventListener('click', () =>{
-    console.log("CLICK NO");
     $("#myModal").modal('hide');
 });
 
@@ -61,7 +60,6 @@ function startGame(selectedWord = null){
 
 // FUNCTION TO ADD NEW WORD. VALIDATE INPUT NEW WORD ONLY LETTERS
 function addNewWord(){
-    
     spanErrorMsg.classList.remove('error');
     let newWord = inputNewWord.value;
     let reg = /^[A-Za-z]+$/;
@@ -72,8 +70,7 @@ function addNewWord(){
     newWord = newWord.toUpperCase();
     secretsWords.push(newWord);
     inputNewWord.value = '';
-    $("#myModal").modal('show');
-    console.log(secretsWords); 
+    $("#myModal").modal('show'); 
 }
 
 // FUNCTION TO GENERATE RANDOM NUMBER
@@ -201,7 +198,6 @@ function inputFocusOut(){
         document.addEventListener('keyup', detectKeyPress);
     }  
 }
-
 
 // SET FOCUS ON INPUT ADD NEW WORD
 window.onload = function() {

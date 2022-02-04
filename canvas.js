@@ -18,15 +18,13 @@ function createBaseHanged(){
     pincel.lineTo(50, 400);
     pincel.lineTo(150, 400);
     pincel.lineTo(100, 380);
-    pincel.fill();
-     
+    pincel.fill();  
 }
 
 // FUNCTION TO CREATE LINES OF THE LETTERS OF THE SECRET WORD
 function createLinesWord(word){
     let xInicial = 180;
     let yInicial = 400;
-
     for(let i=0; i < word.length; i++){
         pincel.moveTo(xInicial, yInicial); 
         pincel.lineTo(xInicial + 20, yInicial);
@@ -50,7 +48,6 @@ function showHitLetter(letter, arrPositions){
     let yInicial = 395;
     arrPositions.forEach((position) => {
         let xInicial = 183;
-        console.log(letter, position);
         xInicial += (30 * position);
         pincel.fillText(letter,xInicial,yInicial);
     });
